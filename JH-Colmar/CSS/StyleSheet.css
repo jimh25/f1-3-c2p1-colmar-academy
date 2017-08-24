@@ -1,0 +1,395 @@
+﻿/*Found online to make elements inlcude the padding with the size of elements*/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+}
+
+body{
+    line-height: 1.15;
+    margin: 0;
+    font-family:'Lato', sans-serif;
+}
+html{
+    font-size: 16px;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+} 
+/*Hidden to start with*/
+.mobile-images{
+    display: none;
+}
+
+
+/*Navigation Bar Container*/
+
+header{
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    width: 100%
+}
+
+/*Left-hand side navigation bar*/
+
+.colmar-logo{
+    font-size: 2rem; /*32px*/
+    align-items: center;
+    display: flex;
+}
+
+.colmar-logo img{
+    margin-left: 24px;
+}
+
+/*Right-hand side navigation bar*/
+nav{
+    display: block;
+}
+.nav-bar-links ul{
+    list-style: none;
+}
+
+.nav-bar-links ul li{
+    display: inline-block;
+    padding-right: 16px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-bar-links ul li:last-child{
+    padding-right: 24px;
+}
+
+/*Mobile Navigation bar*/
+.nav-bar-links-mobile{
+    display: none;
+}
+
+/*For sections with a background colour*/
+
+.coloured-section{
+    background-color: #D8D8D8; 
+}
+ /*Generic sections sections*/
+section{
+    width: 100%;
+}
+
+.left-section{
+    width: 60%;
+    padding: 32px 24px;
+    display: flex;
+    position: relative;
+}
+.right-section{
+    min-width: 40%;
+    position: relative;
+    padding: 32px 0;
+}
+
+/*for images and videos in the left section*/ 
+.left-section img,
+.left-section video{
+    max-height: 100%;
+    max-width: 100%;
+    align-self: center;
+}
+/*Section 1- The banner*/
+
+.banner-headlines{
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+}
+/*Grey box around start here*/
+#start-here{
+    padding: 8px 20px;
+    background-color: #4A4A4A;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 16px;
+}
+
+/*Section 3 Information*/
+
+.image-section{
+    flex-basis: 70%;
+    justify-content: center;
+    display: flex;
+}
+
+.image-section img{
+    max-height: 100%;
+    max-width: 100%;
+    align-self: center;
+}
+.text-section{
+    flex-basis: 30%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.Read-More{ 
+    color: blue;
+    font-weight: bold;
+}
+
+.right-section-information{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d8d8d8;
+    width: 65%;
+    transition: background-color ease-in 650ms;
+}
+
+.right-section-information:hover{
+    background-color: #fff;
+}
+
+.right-section-information h3,
+.right-section-information p{
+    padding-bottom: 8px;
+}
+
+.right-section img{
+    padding-left: 16px;
+    width: 35%;
+    height: auto;
+    align-self: center;
+}
+
+.secondary-banner-container .text-section{
+    line-height: 1.5;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.secondary-banner-container .text-section h1 {
+    padding: 32px 0 24px 0;
+}
+
+
+/*Section 4 Courses*/
+.main{
+    padding: 32px 40px 32px 72px;
+    align-items: center;
+}
+
+.main h1{
+    padding-bottom: 32px;
+    margin: 0;
+}
+
+.course-container{
+    width: 33.33333%;
+}
+
+.course-container img{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding-right: 32px;
+}
+
+.course-container img{
+    max-width: 100%;
+    height: auto;
+}
+
+img.course{
+    align-self: center;
+}
+
+.course-information{
+    padding: 16px 0 24px 16px;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+}
+
+/*Section 5 Thesis Section*/
+
+#thesis{
+    text-align: center;
+    padding-top: 32px;
+}
+
+.thesis-text-section{
+    justify-content: center;
+    padding-left: 16px;
+    margin-right: 16px;
+    border: 1px black solid;
+    width: 65%;
+    transition: background-color ease-in 800ms;
+}
+.left-section .thesis-text h3{
+    padding: 24px 0 8px 0;
+}
+
+.thesis-text-section:hover{
+    background-color: #D8D8D8;
+}
+
+/*Section 6 Footer*/
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;    
+}
+
+footer p:first-child{
+    padding:16px 0 0 24px;
+}
+
+footer p:last-child{
+    text-align: right;
+    padding-right: 24px;
+}
+
+/*Media queries*/
+
+@media only screen and (max-width: 480px){
+    /*Section 3 Banner 2*/
+    .secondary-banner-container .right-section .row{
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .secondary-banner-container .right-section .row .right-section-information{
+        justify-content: center;
+        width: 100%;
+        padding: 8px 0;
+    }
+    .secondary-banner-container .right-section .mobile-images{
+        max-height: 100%;
+        min-width: 100%;
+        align-self: center;
+        display: flex;
+        padding-left: 0;
+    }
+    .desktop-images{
+        display: none;
+    }
+    /*.secondary-banner-container{
+        padding: 0;
+    }*/
+
+    /*Section 4 Courses*/
+    .course-container img{
+        display: none;
+    }
+    .course-information span{
+        display: none;
+    }
+    .course-information{
+        padding: 16px 0 24px 16px;
+        margin: 0 16px 8px 16px ;
+        background-color: aquamarine;
+    }
+    .main .row{
+        flex-direction: column;
+        width: 100%;
+    }
+    .main{
+        padding: 32px 0 24px 0;
+    }
+    .main h1{
+        padding-bottom: 16px;
+    }
+    .course-container{
+        width: 100%;
+    }
+    /*Section 5 Thesis*/
+    .thesis-section .right-section{
+        display: none;
+    }
+    .thesis-section .thesis-text{
+        display: none;
+    }
+    .thesis-section .left-section{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    /*Section 1 - Navigation Bar*/
+    .nav-bar-links-mobile{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+    .colmar-logo{
+        display: none;
+    }
+    .nav-bar-links{
+        display: none;
+    }
+    /*Section 2 First Banner*/
+    .primary-banner-container.row{
+        flex-direction: column; /*altering the direction*/
+    }
+    .primary-banner-container .left-section{
+        width: 100%;
+        padding: 0;
+    }
+    .primary-banner-container .right-section{
+        width: 100%;
+    }
+    .banner-headlines{
+        padding: 32px 16px;
+    }
+    /*Section 3 Secondary Banner*/
+    .secondary-banner-container .left-section{
+        display: none;
+    }
+    .secondary-banner-container .right-section{
+        width: 100%;
+        padding: 16px 16px;  
+    }
+    /*Section 4 Courses*/
+    .main{ 
+        padding: 0 16px;
+    }
+    #learning-headline{
+        padding-top: 32px;
+    }
+    .course-container img{
+    padding: 0;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    /*Section 1 - Navigation Bar*/
+    .colmar-logo{
+        font-size: 1.5rem;
+    }
+    .nav-bar-links ul li{
+        font-size: 1rem;
+    }
+    /*Section 3 Secondary Banner*/
+    .secondary-banner-container .left-section .text-section p:last-child{
+        display: none
+    }
+    .secondary-banner-container .left-section .text-section h1{
+        padding: 12px 0;
+    }
+}
+
